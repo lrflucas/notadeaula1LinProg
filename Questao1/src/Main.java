@@ -1,11 +1,29 @@
-//Elabore um programa em java que informe se um aluno ele está aprovado, reprovado ou na final.
-//O sistema deve solicitar o nome e as notas do aluno.
-//Em seguida, realiza o cálculo da média e informa a situação acadêmica.
-//Se a média for >= 70 está aprovado, abaixo de 40 está reprovado, senão, está na final.
-
+import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Scanner sc = new Scanner(System.in);
+        Scanner sc2 = new Scanner(System.in);
+        Aluno a = new Aluno();
+
+        System.out.print("Qual o nome do(a) aluno(a)? ");
+        a.setNome(sc2.nextLine());
+
+        System.out.print("Qual a primeira nota de " + a.getNome() + "? ");
+        a.setNota1(sc.nextDouble());
+
+        System.out.print("Qual a segunda nota? ");
+        a.setNota2(sc.nextDouble());
+
+        System.out.print("Qual a terceira nota? ");
+        a.setNota3(sc.nextDouble());
+
+        a.calcularMedia();
+
+        a.resultado();
+
     }
+
 }
